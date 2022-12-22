@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+}
+
+.sort-buttons {
+  background-color: grey;
+}
+
+.header {
+  background-color: aliceblue;
+}
+
+.new-student {
+  background-color: salmon;
+  display: flex;
+  justify-content: center;
+}
+
+.hogwarts {
+  background-color: blue;
+}
+
+.voldemorts {
+  background-color: green;
+}
+
+.camps {
+  display: flex;
+}
+
+.camp {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin: 15px;
+}
+
+.card {
+  width: 30%;
+}
