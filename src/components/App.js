@@ -13,35 +13,42 @@ const App = () => {
   const [voldemorts, setVoldemorts] = useState(students.filter(item => !item.isStudent));
   const [singleStudent, setSingleStudent] = useState({});
 
+  const hogwartsStudents = studentsCopy.filter(item => item.isStudent);
+  const voldemortsArmy = studentsCopy.filter(item => !item.isStudent);
+
   const addStudent = (student) => {
     studentsCopy.push(student);
     setStudents(studentsCopy);
-    setHogwarts(studentsCopy.filter(item => item.isStudent))
+    setHogwarts(studentsCopy.filter(item => item.isStudent));
   }
   const sortHouse = (e) => {
-    if (e.target.value === 'All') {
+    if (e.target.value.includes('All')) {
       setHogwarts(students.filter(item => item.isStudent));
     } else {
-      const filteredStudents = studentsCopy.filter(student => student.isStudent && student.house === e.target.value)
-      setHogwarts(filteredStudents)
+      const filteredStudents = studentsCopy.filter(student => student.isStudent && student.house === e.target.value);
+      setHogwarts(filteredStudents);
     }
   }
   const expelStudent = (e) => {
     const student = studentsCopy.find(item => item.id === Number(e.target.value));
     student.isStudent = false;
-    setHogwarts(studentsCopy.filter(item => item.isStudent))
-    setVoldemorts(studentsCopy.filter(item => !item.isStudent))
+    setHogwarts(hogwartsStudents);
+    setVoldemorts(voldemortsArmy);
   }
   const getStudent = (e) => {
     const student = studentsCopy.find(item => item.id === Number(e.target.value));
     setSingleStudent(student);
+  }
+  const editStudent = () => {
+    setHogwarts(hogwartsStudents);
+    setVoldemorts(voldemortsArmy);
   }
 
   return (
     <div className="main">
       <Header />
       <NewStudent addStudent={addStudent} />
-      <EditForm student={singleStudent} />
+      <EditForm student={singleStudent} editStudent={editStudent} />
       <SortButtons sortHouse={sortHouse} />
       <div className="camps">
         <Camp

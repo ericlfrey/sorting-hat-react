@@ -1,25 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { houses } from '../helpers';
 
-const EditForm = (props) => {
-  const [studentName, setStudentName] = useState('');
-  const [studentHouse, setStudentHouse] = useState('');
-  const initialHouse = console.log(props.student.house);
-
-  const handleNameInputChange = (e) => {
-    setStudentName(e.target.value);
+const EditForm = ({ student, editStudent }) => {
+  const [name, setName] = useState(student.name);
+  const [house, setHouse] = useState(name);
+  useEffect(() => {
+    setName(student.name);
+    setHouse(student.house)
+  }, [student]);
+  const handleNameChange = (e) => {
+    setName(e.target.value);
   }
-  const handleHouseChange = (e) => {
-    setStudentHouse(e.target.value);
+  const handleHouseSelect = (e) => {
+    setHouse(e.target.value)
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    const studentObj = {
-      studentName,
-      studentHouse
-    }
-    console.log(studentObj);
-    e.target.reset();
+    student.name = name;
+    student.house = house;
+    editStudent()
   }
 
   return (
@@ -35,21 +34,15 @@ const EditForm = (props) => {
               <input
                 className="form-control form-control-sm"
                 type="text"
-                defaultValue={props.student.name}
-                onChange={handleNameInputChange}
+                defaultValue={name}
+                onChange={handleNameChange}
               />
               <select
                 className="form-select"
-                onChange={handleHouseChange}>
-                {houses.map(item =>
-                  <option
-                    value={item}
-                    key={item}
-                    defaultValue={item === props.student.house}
-                  >
-                    {item}
-                  </option>
-                )}
+                value={house}
+                onChange={handleHouseSelect}
+              >
+                {houses.map(item => <option value={item} key={item}>{item}</option>)}
               </select>
             </div>
             <div className="modal-footer">

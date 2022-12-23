@@ -21,7 +21,7 @@ const NewStudent = (props) => {
   }
 
   return (
-    <div className="new-student">
+    <div className="new-student mb-3">
       <form className="add-student" onSubmit={handleSubmit}>
         <div className="input-group">
           <input

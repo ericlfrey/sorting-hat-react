@@ -1,27 +1,21 @@
 body {
+  background-color: blanchedalmond;
   text-align: center;
 }
 
-.sort-buttons {
-  background-color: grey;
-}
+/* GRYFFINDOR RED #740001 GOLD #
 
-.header {
-  background-color: aliceblue;
-}
+SLYTHERIN GREEN #1A472A SILVER #
+
+HUFFLEPUFF YELLOW #FFD800 BLACK #
+
+RAVENCLAW BLUE #0E1A40 BRONZE # */
+
+
 
 .new-student {
-  background-color: salmon;
   display: flex;
   justify-content: center;
-}
-
-.hogwarts {
-  background-color: blue;
-}
-
-.voldemorts {
-  background-color: green;
 }
 
 .camps {
@@ -43,14 +37,60 @@ body {
   text-align: center;
   margin: auto;
   justify-content: center;
+  align-content: flex-start;
 }
 
 .card {
-  width: 300px;
-  height: 200px;
-  margin: 15px;
-}
-
-.card {
+  /* height: 200px; */
   width: 30%;
+  margin: 12px;
+}
+
+.sort-button {
+  width: 150px;
+}
+
+.All--bg {
+  background-color: grey;
+}
+
+.All--text {
+  color: beige;
+}
+
+.Gryffindor--bg {
+  background-color: #740001;
+}
+
+.Slytherin--bg {
+  background-color: #1A472A;
+}
+
+.Ravenclaw--bg {
+  background-color: #0E1A40;
+}
+
+.Hufflepuff--bg {
+  background-color: #FFD800;
+}
+
+.Gryffindor--text {
+  color: #D3A625;
+}
+
+.Slytherin--text {
+  color: #5D5D5D;
+}
+
+.Ravenclaw--text {
+  color: #946B2D;
+}
+
+.Hufflepuff--text {
+  color: #000000;
+}
+
+.btn:hover {
+  background-color: black;
+  color: ;
 }

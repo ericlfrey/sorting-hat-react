@@ -1,24 +1,20 @@
 import React from 'react';
 import Button from './Button';
+import { houses } from '../helpers';
 
-const SortButtons = (props) => {
-  const houses = [
-    { house: 'All', className: 'secondary' },
-    { house: 'Gryffindor', className: 'danger' },
-    { house: 'Slytherin', className: 'success' },
-    { house: 'Ravenclaw', className: 'primary' },
-    { house: 'Hufflepuff', className: 'warning' }
-  ]
+const SortButtons = ({ sortHouse }) => {
+  const housesCopy = [...houses];
+  housesCopy.unshift('All')
 
   return (
-    <div className="sort-buttons">
-      {houses.map(house =>
+    <div className="sort-buttons mb-3">
+      {housesCopy.map(house =>
         <Button
-          className={`sort-button btn btn-sm btn-${house.className}`}
-          key={house.house}
-          onClick={props.sortHouse}
-          text={house.house}
-          value={house.house}
+          className={`sort-button btn btn-sm ${house}--bg ${house}--text`}
+          key={house}
+          onClick={sortHouse}
+          text={house}
+          value={house}
         />
       )}
     </div>
