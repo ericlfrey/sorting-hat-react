@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
-import { rando } from '../helpers';
+import { rando, houses } from '../helpers';
 
 const NewStudent = (props) => {
-  const houses = [
-    'Gryffindor',
-    'Slytherin',
-    'Hufflepuff',
-    'Ravenclaw'
-  ];
   const [name, setName] = useState('');
 
   const handleNameInputChange = (e) => {
@@ -35,6 +29,7 @@ const NewStudent = (props) => {
             onChange={handleNameInputChange}
             placeholder='Enter Student Name'
             className='student-name form-control'
+            required='required'
           />
           <button className='btn btn-sm btn-dark' type='submit'>Add New Student</button>
         </div>

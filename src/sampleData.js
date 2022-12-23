@@ -31,8 +31,8 @@ const sampleStudents = [
   },
   {
     id: 6,
-    name: 'Some DIck',
-    house: 'Slytherin',
+    name: 'Peter Pettigrew',
+    house: 'Gryffindor',
     isStudent: false
   }
 ]
