@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { houses } from '../helpers';
 
-const EditForm = ({ student, editStudent }) => {
+const EditForm = ({ student, studentsCopy, setHouses }) => {
   const [name, setName] = useState(student.name);
   const [house, setHouse] = useState(name);
   useEffect(() => {
@@ -18,7 +18,7 @@ const EditForm = ({ student, editStudent }) => {
     e.preventDefault();
     student.name = name;
     student.house = house;
-    editStudent()
+    setHouses(studentsCopy)
   }
 
   return (

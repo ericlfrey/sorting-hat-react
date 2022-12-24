@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { rando, houses } from '../helpers';
 
-const NewStudent = (props) => {
+const NewStudent = ({ studentsCopy, setHouses }) => {
   const [name, setName] = useState('');
 
   const handleNameInputChange = (e) => {
@@ -16,7 +16,8 @@ const NewStudent = (props) => {
       house: rando(houses),
       isStudent: true
     }
-    props.addStudent(student)
+    studentsCopy.push(student);
+    setHouses(studentsCopy);
     e.target.reset()
   }
 
@@ -28,7 +29,7 @@ const NewStudent = (props) => {
             type="text"
             onChange={handleNameInputChange}
             placeholder='Enter Student Name'
-            className='student-name form-control'
+            className='student-name form-control form-control-sm'
             required='required'
           />
           <button className='btn btn-sm btn-dark' type='submit'>Add New Student</button>
