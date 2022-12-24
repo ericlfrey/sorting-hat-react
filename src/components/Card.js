@@ -1,19 +1,25 @@
 import React from "react";
 
-const Card = ({ house, id, name, getStudent, studentsCopy, setHouses, camp }) => {
+const Card = ({ house, id, name, studentsCopy, setHouses, camp, setSingleStudent }) => {
   const expelStudent = (e) => {
     const student = studentsCopy.find(item => item.id === Number(e.target.value));
     student.isStudent = false;
     setHouses(studentsCopy);
   }
 
+  const editStudent = (e) => {
+    const student = studentsCopy.find(item => item.id === Number(e.target.value));
+    setSingleStudent(student);
+  }
+
+
   return (
     <div className="card">
-      <div className={`card-body ${camp === 'hogwarts' ? `${house}--bg` : 'voldemort--bg'}`}>
-        <h5 className={`card-title ${camp === 'hogwarts' ? `${house}--text` : 'voldemort--text'}`}>{name}</h5>
-        <h6 className={`card-subtitle mb-2 ${camp === 'hogwarts' ? `${house}--text` : 'voldemort--text'}`}>{house}</h6>
-        <button className="card-link btn btn-dark btn-sm" onClick={getStudent} value={id} data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-        <button className="card-link btn btn-dark btn-sm" onClick={expelStudent} value={id}>Expel</button>
+      <div className={`card-body ${camp === 'hogwarts' ? `${house}-card` : 'voldemort-card'}`}>
+        <h5 className='card-title'>{name}</h5>
+        {camp === 'hogwarts' ? <h6 className='card-subtitle mb-2'>{house}</h6> : ''}
+        <button className={`card-link btn btn-sm ${camp === 'hogwarts' ? `${house}-btn` : 'btn-dark'}`} onClick={editStudent} value={id} data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+        {camp === 'hogwarts' ? <button className={`card-link btn btn-sm ${house}-btn`} onClick={expelStudent} value={id}>Expel</button> : ''}
       </div>
     </div>
   )

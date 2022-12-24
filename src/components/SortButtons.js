@@ -19,7 +19,7 @@ const SortButtons = ({ studentsCopy, setHouses, setHogwarts }) => {
     <div className="sort-buttons mb-3">
       {housesCopy.map(house =>
         <Button
-          className={`sort-button btn btn-sm ${house}--bg ${house}--text`}
+          className={`sort-button btn btn-sm ${house}-btn`}
           key={house}
           onClick={sortHouse}
           text={house}

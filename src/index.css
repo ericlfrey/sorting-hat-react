@@ -3,14 +3,6 @@ body {
   text-align: center;
 }
 
-/* GRYFFINDOR RED #740001 GOLD #
-
-SLYTHERIN GREEN #1A472A SILVER #
-
-HUFFLEPUFF YELLOW #FFD800 BLACK #
-
-RAVENCLAW BLUE #0E1A40 BRONZE # */
-
 .new-student {
   display: flex;
   justify-content: center;
@@ -18,11 +10,11 @@ RAVENCLAW BLUE #0E1A40 BRONZE # */
 
 .camps {
   display: flex;
+  justify-content: center;
 }
 
 .camp-container {
-  width: 50%;
-  /* height: 100vh; */
+  width: 50vw;
   display: flex;
   flex-direction: column;
 }
@@ -42,6 +34,7 @@ RAVENCLAW BLUE #0E1A40 BRONZE # */
   border: none;
   width: 30%;
   margin: 12px;
+  height: 10rem;
 }
 
 .card-body {
@@ -52,51 +45,62 @@ RAVENCLAW BLUE #0E1A40 BRONZE # */
   width: 150px;
 }
 
-.All--bg {
-  background-color: grey;
+.btn-dark {
+  color: blanchedalmond;
 }
 
-.All--text {
+.All-btn {
+  background-color: grey;
   color: beige;
 }
 
-.Gryffindor--bg {
+/* GRYFFINDOR RED #740001 GOLD #D3A625
+SLYTHERIN GREEN #1A472A SILVER #silver
+RAVENCLAW BLUE #0E1A40 BRONZE #946B2D
+HUFFLEPUFF YELLOW #FFD800 BLACK #000000 */
+
+.Gryffindor-card {
+  background-color: #D3A625;
+  color: #740001;
+}
+
+.Slytherin-card {
+  background-color: silver;
+  color: #1A472A;
+}
+
+.Ravenclaw-card {
+  background-color: #946B2D;
+  color: #0E1A40;
+}
+
+.Hufflepuff-card {
+  background-color: #000000;
+  color: #FFD800;
+}
+
+.Gryffindor-btn {
   background-color: #740001;
-}
-
-.Slytherin--bg {
-  background-color: #1A472A;
-}
-
-.Ravenclaw--bg {
-  background-color: #0E1A40;
-}
-
-.Hufflepuff--bg {
-  background-color: #FFD800;
-}
-
-.Gryffindor--text {
   color: #D3A625;
 }
 
-.Slytherin--text {
+.Slytherin-btn {
+  background-color: #1A472A;
   color: silver;
 }
 
-.Ravenclaw--text {
+.Ravenclaw-btn {
+  background-color: #0E1A40;
   color: #946B2D;
 }
 
-.Hufflepuff--text {
+.Hufflepuff-btn {
+  background-color: #FFD800;
   color: #000000;
 }
 
-.voldemort--bg {
+.voldemort-card {
   background-color: #4d5c3c;
-}
-
-.voldemort--text {
   color: black;
 }
 
