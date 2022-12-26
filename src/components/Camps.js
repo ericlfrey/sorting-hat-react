@@ -17,6 +17,7 @@ const Camps = ({ hogwarts, voldemorts, setHouses, studentsCopy, setSingleStudent
       className={'voldemorts'}
       heading={`Voldemort's Army`}
       key={'voldemorts'}
+      setHouses={setHouses}
       studentsCopy={studentsCopy}
       setSingleStudent={setSingleStudent}
     />

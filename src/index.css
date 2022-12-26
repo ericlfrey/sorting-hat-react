@@ -122,10 +122,6 @@ body {
   height: 100px;
 }
 
-.card-link {
-  width: 70px;
-}
-
 .card-body {
   border-bottom: solid 1px #181818;
   border-left: solid 1px #181818;
@@ -246,7 +242,6 @@ HUFFLEPUFF YELLOW #FFD800 BLACK #000000 */
 .voldemort-img-container {
   background-color: #4d5c3c;
 }
-
 
 .modal-content {
   background-image: url(./media/paper.png);
