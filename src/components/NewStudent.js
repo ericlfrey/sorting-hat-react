@@ -32,7 +32,7 @@ const NewStudent = ({ studentsCopy, setHouses }) => {
             className='student-name form-control form-control-sm'
             required='required'
           />
-          <button className='btn btn-sm btn-dark' type='submit'>Add New Student</button>
+          <button className='btn btn-sm add-btn' type='submit'>Add New Student</button>
         </div>
       </form>
     </div>

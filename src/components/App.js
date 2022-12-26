@@ -8,8 +8,8 @@ import EditForm from './EditForm';
 import Camps from './Camps';
 
 const App = () => {
-  const hogwartsStudents = (arr) => arr.filter(item => item.isStudent)
-  const VoldemortsArmy = (arr) => arr.filter(item => !item.isStudent)
+  const hogwartsStudents = (arr) => arr.filter(item => item.isStudent).sort((a, b) => a.house.localeCompare(b.house));
+  const VoldemortsArmy = (arr) => arr.filter(item => !item.isStudent).sort((a, b) => a.name.localeCompare(b.name));
 
   const [students, setStudents] = useState(sampleStudents);
   const studentsCopy = [...students];

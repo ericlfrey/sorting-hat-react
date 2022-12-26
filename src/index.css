@@ -1,13 +1,76 @@
 body {
   background-color: peru;
   text-align: center;
+  background-image: url(../src/media/marauder-back.png);
+  font-family: 'Cormorant Garamond', serif;
+  color: saddlebrown;
 }
 
+.welcome-btn {
+  background-color: #181818;
+  color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  width: 20%;
+}
 
+.welcome-btn:hover {
+  background-color: #2c2c2c;
+}
+
+.welcome-hat {
+  margin-top: 50px;
+}
+
+.welcome-text {
+  width: 20%;
+  margin: 40px 40%;
+  font-size: 30px;
+  text-shadow: 0 0 1px black;
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5em;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 1px black;
+}
 
 .new-student {
   display: flex;
   justify-content: center;
+}
+
+.add-student {
+  margin-bottom: 30px;
+}
+
+.student-name,
+.edit-name,
+.form-select {
+  background-color: beige;
+  border: 1px solid #181818;
+}
+
+.student-name:focus,
+.edit-name:focus,
+.form-select:focus {
+  background-color: beige;
+  border: 1px solid #181818;
+  box-shadow: none;
+}
+
+.add-btn {
+  background-color: #181818;
+  color: antiquewhite;
+}
+
+.add-btn:hover {
+  background-color: #2c2c2c;
+  color: antiquewhite;
 }
 
 .camps {
@@ -36,38 +99,71 @@ body {
   border: none;
   width: 30%;
   margin: 12px;
-  height: 10rem;
+  height: 15em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img-container {
   background-color: rosybrown;
+  border-top: solid 1px #181818;
+  border-left: solid 1px #181818;
+  border-right: solid 1px #181818;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 15px;
 }
 
 .card-image {
-  height: 60px;
-
+  height: 100px;
 }
 
+.card-link {
+  width: 70px;
+}
 
 .card-body {
-  border-radius: 5px;
+  border-bottom: solid 1px #181818;
+  border-left: solid 1px #181818;
+  border-right: solid 1px #181818;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.sort-buttons {
+  border: solid 1px #181818;
 }
 
 .sort-button {
   width: 150px;
 }
 
-.btn-dark {
+.btn-dark,
+.btn-dark:hover,
+.btn-dark:focus {
   color: blanchedalmond;
+  border: none;
+  box-shadow: none;
 }
 
-.All-btn {
+.All-btn,
+.submit-btn {
   background-color: grey;
   color: beige;
 }
 
+.All-btn:hover,
+.submit-btn:hover {
+  background-color: dimgrey;
+  color: beige;
+}
+
 /* GRYFFINDOR RED #740001 GOLD #D3A625
-SLYTHERIN GREEN #1A472A SILVER #silver
+SLYTHERIN GREEN #1A472A SILVER ##898989
 RAVENCLAW BLUE #0E1A40 BRONZE #946B2D
 HUFFLEPUFF YELLOW #FFD800 BLACK #000000 */
 
@@ -91,33 +187,78 @@ HUFFLEPUFF YELLOW #FFD800 BLACK #000000 */
   color: #FFD800;
 }
 
-.Gryffindor-btn {
+.Gryffindor-btn,
+.Gryffindor-img-container {
   background-color: #740001;
   color: #D3A625;
 }
 
-.Slytherin-btn {
+.Gryffindor-btn:hover,
+.Gryffindor-btn:active,
+.Gryffindor-btn:focus {
+  background-color: #5c0002;
+  color: #D3A625;
+}
+
+.Slytherin-btn,
+.Slytherin-img-container {
   background-color: #1A472A;
   color: #898989;
 }
 
-.Ravenclaw-btn {
+.Slytherin-btn:hover,
+.Slytherin-btn:active,
+.Slytherin-btn:focus {
+  background-color: #143720;
+  color: #898989;
+}
+
+.Ravenclaw-btn,
+.Ravenclaw-img-container {
   background-color: #0E1A40;
   color: #946B2D;
 }
 
-.Hufflepuff-btn {
+.Ravenclaw-btn:hover,
+.Ravenclaw-btn:active,
+.Ravenclaw-btn:focus {
+  background-color: #15255c;
+  color: #946B2D;
+}
+
+.Hufflepuff-btn,
+.Hufflepuff-img-container {
   background-color: #FFD800;
   color: #000000;
 }
 
+.Hufflepuff-btn:hover,
+.Hufflepuff-btn:active,
+.Hufflepuff-btn:focus {
+  background-color: #d0a22e;
+  color: #000000;
+}
+
 .voldemort-card {
+  background-color: beige;
+}
+
+.voldemort-img-container {
   background-color: #4d5c3c;
-  color: black;
 }
 
 
-.btn:hover {
-  background-color: black;
-  color: olive;
+.modal-content {
+  background-image: url(./media/paper.png);
+}
+
+.modal-header {
+  color: #181818;
+  font-size: 1.25rem;
+  text-shadow: 0 0 1px black;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
 }

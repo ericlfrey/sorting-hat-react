@@ -33,7 +33,7 @@ const EditForm = ({ student, setSingleStudent, setHouses, studentsCopy }) => {
           <form onSubmit={handleSubmit} value={student.id}>
             <div className="modal-body">
               <input
-                className="form-control form-control-sm"
+                className="form-control form-control-sm edit-name"
                 type="text"
                 value={name}
                 onChange={handleNameChange}
@@ -45,7 +45,7 @@ const EditForm = ({ student, setSingleStudent, setHouses, studentsCopy }) => {
               }
             </div>
             <div className="modal-footer">
-              <button type="submit" className="btn btn-secondary" data-bs-dismiss="modal">Submit</button>
+              <button type="submit" className="btn btn-sm submit-btn" data-bs-dismiss="modal">Submit</button>
             </div>
           </form>
         </div>
