@@ -15,14 +15,16 @@ const Card = ({ house, id, name, studentsCopy, setHouses, camp, setSingleStudent
 
   return (
     <div className="card">
-      <div className="card-img-container">
+      <div className={`card-img-container ${camp === 'hogwarts' ? `${house}-img-container` : 'voldemort-img-container'}`}>
         <CardImage camp={camp} house={house} />
       </div>
       <div className={`card-body ${camp === 'hogwarts' ? `${house}-card` : 'voldemort-card'}`}>
         <h5 className='card-title'>{name}</h5>
         {camp === 'hogwarts' ? <h6 className='card-subtitle mb-2'>{house}</h6> : ''}
-        <button className={`card-link btn btn-sm ${camp === 'hogwarts' ? `${house}-btn` : 'btn-dark'}`} onClick={editStudent} value={id} data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
-        {camp === 'hogwarts' ? <button className={`card-link btn btn-sm ${house}-btn`} onClick={expelStudent} value={id}>Expel</button> : ''}
+        <div className="card-btn-container">
+          <button className={`card-link btn btn-sm ${camp === 'hogwarts' ? `${house}-btn` : 'btn-dark'}`} onClick={editStudent} value={id} data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+          {camp === 'hogwarts' ? <button className={`card-link btn btn-sm ${house}-btn`} onClick={expelStudent} value={id}>Expel</button> : ''}
+        </div>
       </div>
     </div>
   )

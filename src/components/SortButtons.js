@@ -16,7 +16,7 @@ const SortButtons = ({ studentsCopy, setHouses, setHogwarts }) => {
   }
 
   return (
-    <div className="sort-buttons mb-3">
+    <div className="sort-buttons btn-group">
       {housesCopy.map(house =>
         <Button
           className={`sort-button btn btn-sm ${house}-btn`}
