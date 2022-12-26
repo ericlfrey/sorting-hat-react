@@ -1,4 +1,5 @@
 import React from "react";
+import CardImage from './CardImage'
 
 const Card = ({ house, id, name, studentsCopy, setHouses, camp, setSingleStudent }) => {
   const expelStudent = (e) => {
@@ -12,9 +13,11 @@ const Card = ({ house, id, name, studentsCopy, setHouses, camp, setSingleStudent
     setSingleStudent(student);
   }
 
-
   return (
     <div className="card">
+      <div className="card-img-container">
+        <CardImage camp={camp} house={house} />
+      </div>
       <div className={`card-body ${camp === 'hogwarts' ? `${house}-card` : 'voldemort-card'}`}>
         <h5 className='card-title'>{name}</h5>
         {camp === 'hogwarts' ? <h6 className='card-subtitle mb-2'>{house}</h6> : ''}
