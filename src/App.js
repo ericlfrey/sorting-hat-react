@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import WelcomePage from './WelcomePage';
-import Header from './Header';
-import SortButtons from './SortButtons';
-import NewStudent from './NewStudent';
-import sampleStudents from '../sampleData'
-import EditForm from './EditForm';
-import Camps from './Camps';
+import WelcomePage from './components/WelcomePage/WelcomePage';
+import Header from './components/Header';
+import SortButtons from './components/SortButtons/SortButtons';
+import NewStudent from './components/NewStudent/NewStudent';
+import sampleStudents from './sampleData'
+import EditForm from './components/EditForm/EditForm';
+import Camps from './components/Camps/Camps';
+import { hogwartsStudents, voldemortsArmy } from './helpers';
 
 const App = () => {
-  const hogwartsStudents = (arr) => arr.filter(item => item.isStudent).sort((a, b) => a.house.localeCompare(b.house));
-  const VoldemortsArmy = (arr) => arr.filter(item => !item.isStudent).sort((a, b) => a.name.localeCompare(b.name));
 
   const [students, setStudents] = useState(sampleStudents);
   const studentsCopy = [...students];
   const [hogwarts, setHogwarts] = useState(hogwartsStudents(students));
-  const [voldemorts, setVoldemorts] = useState(VoldemortsArmy(students));
+  const [voldemorts, setVoldemorts] = useState(voldemortsArmy(students));
   const [singleStudent, setSingleStudent] = useState(studentsCopy[0]);
   const [show, setShow] = useState(true);
 
-  const setHouses = (arr) => {
+  const updateStudentArrays = (arr) => {
     setStudents(arr);
     setHogwarts(hogwartsStudents(arr));
-    setVoldemorts(VoldemortsArmy(arr));
+    setVoldemorts(voldemortsArmy(arr));
   }
 
   return (
@@ -32,21 +31,21 @@ const App = () => {
           <Header />
           <NewStudent
             studentsCopy={studentsCopy}
-            setHouses={setHouses} />
+            updateStudentArrays={updateStudentArrays} />
           <EditForm
             student={singleStudent}
             setSingleStudent={setSingleStudent}
-            setHouses={setHouses}
+            updateStudentArrays={updateStudentArrays}
             studentsCopy={studentsCopy} />
           <SortButtons
             studentsCopy={studentsCopy}
-            setHouses={setHouses}
+            updateStudentArrays={updateStudentArrays}
             setHogwarts={setHogwarts} />
           <Camps
             hogwarts={hogwarts}
             voldemorts={voldemorts}
             studentsCopy={studentsCopy}
-            setHouses={setHouses}
+            updateStudentArrays={updateStudentArrays}
             setSingleStudent={setSingleStudent} />
         </>
       }

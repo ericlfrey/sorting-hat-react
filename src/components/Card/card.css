@@ -1,0 +1,82 @@
+.card {
+  border: none;
+  width: 30%;
+  margin: 12px;
+  height: 15em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-container {
+  background-color: rosybrown;
+  border-top: solid 1px #181818;
+  border-left: solid 1px #181818;
+  border-right: solid 1px #181818;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 15px;
+}
+
+.card-image {
+  height: 100px;
+}
+
+.card-body {
+  border-bottom: solid 1px #181818;
+  border-left: solid 1px #181818;
+  border-right: solid 1px #181818;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.voldemort-card {
+  background-color: beige;
+}
+
+.voldemort-img-container {
+  background-color: #4d5c3c;
+}
+
+.Gryffindor-img-container {
+  background-color: #740001;
+  color: #D3A625;
+}
+
+.Slytherin-img-container {
+  background-color: #1A472A;
+  color: #898989;
+}
+
+.Ravenclaw-img-container {
+  background-color: #0E1A40;
+  color: #946B2D;
+}
+
+.Hufflepuff-img-container {
+  background-color: #FFD800;
+  color: #000000;
+}
+
+.Gryffindor-card {
+  background-color: #D3A625;
+  color: #740001;
+}
+
+.Slytherin-card {
+  background-color: #898989;
+  color: #1A472A;
+}
+
+.Ravenclaw-card {
+  background-color: #946B2D;
+  color: #0E1A40;
+}
+
+.Hufflepuff-card {
+  background-color: #000000;
+  color: #FFD800;
+}

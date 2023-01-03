@@ -1,0 +1,14 @@
+.modal-content {
+  background-image: url(../../media/paper.png);
+}
+
+.modal-header {
+  color: #181818;
+  font-size: 1.25rem;
+  text-shadow: 0 0 1px black;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}

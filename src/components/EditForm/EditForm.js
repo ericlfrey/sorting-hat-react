@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { houses } from '../helpers';
+import { houses } from '../../helpers';
+import './edit-form.css'
 
-const EditForm = ({ student, setSingleStudent, setHouses, studentsCopy }) => {
+const EditForm = ({ student, setSingleStudent, updateStudentArrays, studentsCopy }) => {
   const [name, setName] = useState(student.name);
   const [house, setHouse] = useState(student.house);
   useEffect(() => {
@@ -19,7 +20,7 @@ const EditForm = ({ student, setSingleStudent, setHouses, studentsCopy }) => {
     student.name = name;
     student.house = house;
     setSingleStudent(student);
-    setHouses(studentsCopy)
+    updateStudentArrays(studentsCopy)
   }
 
   return (
