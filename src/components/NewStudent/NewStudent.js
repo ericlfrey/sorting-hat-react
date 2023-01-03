@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { rando, houses } from '../helpers';
+import { rando, houses } from '../../helpers';
+import './new-student.css'
 
-const NewStudent = ({ studentsCopy, setHouses }) => {
+const NewStudent = ({ studentsCopy, updateStudentArrays }) => {
   const [name, setName] = useState('');
 
   const handleNameInputChange = (e) => {
@@ -17,7 +18,7 @@ const NewStudent = ({ studentsCopy, setHouses }) => {
       isStudent: true
     }
     studentsCopy.push(student);
-    setHouses(studentsCopy);
+    updateStudentArrays(studentsCopy);
     e.target.reset()
   }
 

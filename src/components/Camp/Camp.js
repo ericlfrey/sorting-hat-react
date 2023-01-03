@@ -1,7 +1,8 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../Card/Card';
+import './camp.css'
 
-const Camp = ({ className, heading, arr, studentsCopy, setHouses, setSingleStudent }) => {
+const Camp = ({ className, heading, arr, studentsCopy, updateStudentArrays, setSingleStudent }) => {
   return (
     <div className={`camp-container ${className} mt-3`}>
       <h3 className='mb-3 heading'>{heading}</h3>
@@ -14,7 +15,7 @@ const Camp = ({ className, heading, arr, studentsCopy, setHouses, setSingleStude
             house={item.house}
             id={item.id}
             arr={arr}
-            setHouses={setHouses}
+            updateStudentArrays={updateStudentArrays}
             studentsCopy={studentsCopy}
             setSingleStudent={setSingleStudent}
           />

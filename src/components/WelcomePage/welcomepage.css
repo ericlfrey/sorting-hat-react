@@ -1,0 +1,24 @@
+.welcome-btn {
+  background-color: #181818;
+  color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  width: 20%;
+}
+
+.welcome-btn:hover {
+  background-color: #2c2c2c;
+}
+
+.welcome-hat {
+  margin-top: 50px;
+}
+
+.welcome-text {
+  width: 20%;
+  margin: 40px 40%;
+  font-size: 30px;
+  text-shadow: 0 0 1px black;
+}

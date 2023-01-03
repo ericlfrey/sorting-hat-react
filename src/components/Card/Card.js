@@ -1,22 +1,20 @@
 import React from "react";
 import CardImage from './CardImage'
+import './card.css'
 
-const Card = ({ house, id, name, studentsCopy, setHouses, camp, setSingleStudent }) => {
-  const expelStudent = (e) => {
-    const student = studentsCopy.find(item => item.id === Number(e.target.value));
+const Card = ({ house, id, name, studentsCopy, updateStudentArrays, camp, setSingleStudent }) => {
+  const student = studentsCopy.find(item => item.id === id);
+
+  const expelStudent = () => {
     student.isStudent = false;
-    setHouses(studentsCopy);
+    updateStudentArrays(studentsCopy);
   }
-
-  const editStudent = (e) => {
-    const student = studentsCopy.find(item => item.id === Number(e.target.value));
+  const editStudent = () => {
     setSingleStudent(student);
   }
-
-  const deleteStudent = (e) => {
-    const student = studentsCopy.find(item => item.id === Number(e.target.value));
+  const deleteStudent = () => {
     studentsCopy.splice(studentsCopy.indexOf(student), 1);
-    setHouses(studentsCopy);
+    updateStudentArrays(studentsCopy);
   }
 
   return (

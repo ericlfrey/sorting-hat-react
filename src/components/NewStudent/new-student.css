@@ -1,0 +1,18 @@
+.new-student {
+  display: flex;
+  justify-content: center;
+}
+
+.add-student {
+  margin-bottom: 30px;
+}
+
+.add-btn {
+  background-color: #181818;
+  color: antiquewhite;
+}
+
+.add-btn:hover {
+  background-color: #2c2c2c;
+  color: antiquewhite;
+}

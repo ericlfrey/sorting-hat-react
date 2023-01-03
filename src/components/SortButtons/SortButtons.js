@@ -1,14 +1,15 @@
 import React from 'react';
-import Button from './Button';
-import { houses } from '../helpers';
+import Button from '../Button';
+import { houses } from '../../helpers';
+import './sort-buttons.css'
 
-const SortButtons = ({ studentsCopy, setHouses, setHogwarts }) => {
+const SortButtons = ({ studentsCopy, updateStudentArrays, setHogwarts }) => {
   const housesCopy = [...houses];
   housesCopy.unshift('All')
 
   const sortHouse = (e) => {
     if (e.target.value.includes('All')) {
-      setHouses(studentsCopy);
+      updateStudentArrays(studentsCopy);
     } else {
       const filteredStudents = studentsCopy.filter(student => student.isStudent && student.house === e.target.value);
       setHogwarts(filteredStudents);

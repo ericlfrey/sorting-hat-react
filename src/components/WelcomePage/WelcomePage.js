@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from "./Button";
-import sortingHat from '../media/sortingHat.png'
+import Button from "../Button";
+import sortingHat from '../../media/sortingHat.png'
+import './welcomepage.css'
 
 const WelcomePage = ({ setShow, show }) => {
 
